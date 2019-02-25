@@ -48,12 +48,14 @@ app.get('/todos/:id',(req,res)=>{
     },(err)=>{console.log("errrrrr")}) 
 
 })
-app.listen(3000,()=>{
-    console.log("Started on port #3000")
+
+var port=process.env.PORT
+app.listen(port,()=>{
+    console.log(`Started on port ${port}`)
 })
 
 
 
-
+ 
 
 module.exports={app}
